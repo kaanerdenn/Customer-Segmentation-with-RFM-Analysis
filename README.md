@@ -1,4 +1,5 @@
 # Customer-Segmentation-with-RFM-Analysis
+
 1) Data Preparation
 Loading the dataset and continuing by creating a copy to avoid making changes to the main dataset.
 df_ = pd.read_csv("flo_data_20k.csv")
@@ -11,6 +12,7 @@ df.shape
 df.describe().T
 df.isnull().sum()
 df.info()
+
 The columns we will handle are ([‘master_id’, ‘order_channel’, ‘last_order_channel’, ‘first_order_date’, ‘last_order_date’, ‘last_order_date_online’, ‘last_order_date_offline’, ‘order_num_total_ever_online’, ‘order_num_total_ever_offline’, ‘customer_value_total_ever_offline’, ‘customer_value_total_ever_online’, ‘interested_in_categories_12’, ‘order_num_total’, ‘customer_value_total’])
 Created new variables for each customer’s total purchases and spending:
 df["order_num_total"] = df["order_num_total_ever_online"] + df["order_num_total_ever_offline"]
